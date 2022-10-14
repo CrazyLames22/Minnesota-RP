@@ -95,7 +95,7 @@ router.post("/create", hasPerms(),async (req, res) => {
                 .setThumbnail(`https://cdn.discordapp.com/avatars/${req.user.discordId}/${req.user.avatar}`)
                 .setDescription(`${req.user.username} has infracted [${infraction.suspect.name}](https://roblox.com/users/${infraction.suspect.id})\n\n**Infraction Details**`)
                 .addFields(
-                    {name: 'Details', value: `Type: \`${infraction.type}\`\nReason: \`${infraction.reason}\`\nNotes: \`${infraction.notes}\`\nDate: <t:${Math.trunc(new Date(infraction.date).getTime() / 1000)}>`, inline: true},{name: 'Suspect', value: `[${infraction.suspect.name}](https://roblox.com/users/${infraction.suspect.id})`, inline: true},{name: 'Moderator', value: `<@${infraction.suspect.id}>`, inline: true}
+                    {name: 'Details', value: `Type: \`${infraction.type}\`\nReason: \`${infraction.reason}\`\nNotes: \`${infraction.notes}\`\nDate: <t:${Math.trunc(new Date(infraction.date).getTime() / 1000)}>`, inline: true},{name: 'Suspect', value: `[${infraction.suspect.name}](https://roblox.com/users/${infraction.suspect.id})`, inline: true},{name: 'Moderator', value: `<@${infraction.moderator.id}>`, inline: true}
                 )
                 .setColor('Orange')
             ]})
