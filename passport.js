@@ -8,7 +8,7 @@ var scopes = ['identify'];
 passport.use(new DiscordStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: `http://${process.env.CLIENT_SITE}/auth/discord/callback`,
+    callbackURL: `${process.env.CLIENT_SITE}/auth/discord/callback`,
     scope: scopes,
 },
 async function(accessToken, refreshToken, profile, done) {
