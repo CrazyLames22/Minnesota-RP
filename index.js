@@ -102,14 +102,17 @@ client.login(process.env.BOT_TOKEN)
 }
 
 const startServer = async () => {
-    if (await fs.existsSync('./build')) {
-        await fs.rmSync('./build', {recursive: true, force: true}, () => {return console.log('Deleted prior build.'.green)})
-    }
     console.log('Building application, please wait...'.red.bold)
     loadingSpinner.start(250, {
     clearChar: true
     });
-    await execSync("cd client && npm run build").toString();
+    if(! await fs.existsSync('./client/node_modules')) {
+        await execSync("cd client && npm install");
+    }
+    if (await fs.existsSync('./build')) {
+        await fs.rmSync('./build', {recursive: true, force: true}, () => {return console.log('Deleted prior build.'.green)})
+    }
+    await execSync("cd client && npm run build");
     if(fs.existsSync('./client/build')) {
         fs.rename('./client/build', './build', function (err) {
             if (err) throw err
