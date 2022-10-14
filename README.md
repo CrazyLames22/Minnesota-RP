@@ -5,7 +5,7 @@ ERLC Website Infraction System
 <h1>Installation</h1>
 Upload all files to your desired hosting site
 
-Run <script>cd client && npm install</script> and then <script>cd client && npm install</script>
+Run <script>cd client && npm install</script>.
 
 Go to your desired database host for <b>MySQL</b> - if you do not have one, [clevercloud](https://www.clever-cloud.com/) works great
 Create a database and copy your credentials into the .env
