@@ -68,10 +68,10 @@ app.get('/*', function (req, res) {
 });
 
 client.on('ready', async () => {
-    app.listen(process.env.express_port, async () => {
+    app.listen(process.env.PORT, async () => {
         console.log('---------------'.gray.bold)
         console.log('The server has started'.cyan)
-        console.log(`Running on port: ${process.env.express_port}`.cyan.bold)
+        console.log(`Running on port: ${process.env.PORT}`.cyan.bold)
         console.log('---------------'.gray.bold)
     
         db.authenticate()
