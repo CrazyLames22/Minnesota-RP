@@ -1,0 +1,45 @@
+body {
+    background-image: url('../../components/backer1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+#root {
+min-width: 100vw;
+min-height: 100vh;
+}
+
+#mobileHide {
+    display: inline-flex;
+}
+
+#mobileShow {
+    display: none;
+}
+
+#mobileHide2 {
+    display: block;
+    width: 99%;
+}
+
+#mobileShow2 {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #mobileHide {
+        display: none;
+    }
+    #mobileShow {
+        display: inline-flex;
+    }
+    #mobileHide2 {
+        display: none;
+    }
+    #mobileShow2 {
+        display: block;
+        width: 99%;
+    }
+}

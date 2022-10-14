@@ -1,0 +1,33 @@
+body {
+    background-image: url('../components/backer1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+#root {
+min-width: 100vw;
+min-height: 100vh;
+}
+
+.MuiTypography-root {
+    font-family: 'Inter', sans-serif;
+}
+
+#mobileHide {
+    display: inline;
+}
+
+#mobileShow {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #mobileHide {
+        display: none;
+    }
+    #mobileShow {
+        display: flex;
+    }
+}

@@ -1,0 +1,31 @@
+body {
+    background-image: url('../components/backer1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+    font-family: 'Inter', sans-serif;
+}
+
+#root {
+min-width: 100vw;
+min-height: 100vh;
+}
+
+#discordIframeHolder {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: inline;
+    margin: 1rem;
+    height: 20vh;
+}
+
+@media screen and (max-width: 600px) {
+    #discordIframeHolder {
+        display: none;
+    }
+}
+
+.MuiTypography-root {
+    font-family: 'Inter', sans-serif;
+}
